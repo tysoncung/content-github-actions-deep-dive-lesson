@@ -46,6 +46,7 @@ jobs:
           path: ${{ github.sha }}.zip
   publish:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: create release
         uses: actions/create-release@v1
